@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pilgrim Pass</string>
+    <string name="img_title">Img_title</string>
+    <string name="guiding_every_step_of_the_way">guiding_every_step_of_the_way</string>
+    <string name="login">login</string>
+    <string name="signup">signup</string>
+    <string name="or">or</string>
+    <string name="pilgrim_pass">pilgrim_pass</string>
+    <string name="guiding">guiding_every_step_of_the_way</string>
+    <string name="select_user_type">select_user_type</string>
+    <string name="username">username</string>
+    <string name="select_province">select_province</string>
+    <string name="sign_up">sign_up</string>
+    <string name="password">password</string>
+    <string name="lgn">Login</string>
+    <string name="psd">Password</string>
+    <string name="usern">Username</string>
+    <string name="profileui">Profile</string>
+    <string name="qr_code_passui">QR Code Pass</string>
+    <string name="booking_screenui">Booking Screen</string>
+    <string name="scan_pass_organizersui">Scan Pass (Organizers)</string>
+    <string name="live_mapui">Live Map</string>
+    <string name="admin_panelui">Admin Panel</string>
+    <string name="smalldescription">Sacred Temple of the Tooth Relic in Kandy, Sri Lanka</string>
+    <string name="daladamaligawa">Dalada Maligawa</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <string name="select_date">Select Date</string>
+    <string name="select_time">Select Time</string>
+    <string name="selected_date_not_set">Selected Date: Not set</string>
+    <string name="selected_time_not_set">Selected Time: Not set</string>
+    <string name="your_qr_code_pass">Your QR Code Pass</string>
+    <string name="generate_qr_for_booking">Generate QR for Booking</string>
+    <string name="Qrimg">qrimg</string>
+    <string name="scan_qr_code">Scan QR Code</string>
+    <string name="full_name">Full Name</string>
+    <string name="change_picture">Change Picture</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="email">Email</string>
+    <string name="save">Save</string>
+    <string name="reset">Reset</string>
+    <string name="select_maligawa_location">Select Maligawa Location</string>
+    <string name="results_will_appear_here">Results will appear here…</string>
+    <string name="admin_panel">Admin Panel</string>
+    <string name="view_stats">View Stats</string>
+    <string name="view_bookings">View Bookings</string>
+    <string name="login_head">LOGIN</string>
+    <string name="pilgrim_pass_header">Pilgrim Pass</string>
+    <string name="about_pilgrimage_days">About Pilgrimage Days</string>
+    <string name="booking_screen">Booking Screen</string>
+    <string name="please_select_your_preferred_date_and_time_for_your_visit">Please select your preferred date and time for your visit.</string>
+    <string name="booking_screen_HEAD">BOOKING SCREEN</string>
+    <string name="enter_address">enter_address</string>
+    <string name="show_location">show_location</string>
+    <string name="show_locationname">Show Location</string>
+    <string name="enter_address_name">Enter address</string>
+
+
+</resources>

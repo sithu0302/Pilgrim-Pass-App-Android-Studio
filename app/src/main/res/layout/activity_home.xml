@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/layout/activity_main.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Header include (full width) -->
+    <include
+        layout="@layout/header" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#FFF">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal">
+
+            <!-- Title -->
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="@string/daladamaligawa"
+                android:textColor="#009688"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+
+            <!-- Sub-description -->
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/smalldescription"
+                android:textSize="16sp"
+                android:textColor="#444"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <!-- Buttons -->
+            <Button
+                android:id="@+id/btnBooking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/booking_screenui"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/btnQrPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/qr_code_passui"
+                android:layout_marginTop="16dp"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/btnScanPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/scan_pass_organizersui"
+                android:layout_marginTop="16dp"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/profileui"
+                android:layout_marginTop="16dp"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/btnLiveMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/live_mapui"
+                android:layout_marginTop="16dp"
+                tools:ignore="VisualLintButtonSize" />
+
+            <Button
+                android:id="@+id/btnAdminPanel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/admin_panelui"
+                android:layout_marginTop="16dp"
+                tools:ignore="VisualLintButtonSize" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
