@@ -10,7 +10,7 @@
 
     <!-- User Type Spinner -->
 
-    <!-- Province Spinner -->
+
 
     <TextView
         android:id="@+id/textUserType"
@@ -39,6 +39,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.291" />
+
+    <!-- Province Spinner -->
 
     <TextView
         android:id="@+id/textProvince"
@@ -100,7 +102,7 @@
             android:hint="@string/password"
             android:inputType="textPassword"
             android:textColorHint="#333333"
-            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />  <!-- UPDATED COLOR -->
+            tools:ignore="TextContrastCheck,VisualLintTextFieldSize" />
         tools:ignore="VisualLintTextFieldSize" />
     </com.google.android.material.textfield.TextInputLayout>
 

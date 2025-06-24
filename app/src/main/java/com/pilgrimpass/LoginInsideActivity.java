@@ -19,7 +19,7 @@ public class LoginInsideActivity extends AppCompatActivity {
         @Override
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
-            setContentView(R.layout.activity_login_inside); // ✅ Make sure this matches your Login1 UI
+            setContentView(R.layout.activity_login_inside);
 
             editUsername = findViewById(R.id.editUsername);
             editPassword = findViewById(R.id.editPassword);
@@ -37,7 +37,7 @@ public class LoginInsideActivity extends AppCompatActivity {
                     Toast.makeText(this, "Please enter username and password", Toast.LENGTH_SHORT).show();
                 } else if (username.equals(savedUsername) && password.equals(savedPassword)) {
                     Toast.makeText(this, "Login successful", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(LoginInsideActivity.this, HomeActivity.class)); // ✅ Go to Home screen
+                    startActivity(new Intent(LoginInsideActivity.this, HomeActivity.class));
                     finish();
                 } else {
                     Toast.makeText(this, "Invalid credentials", Toast.LENGTH_SHORT).show();

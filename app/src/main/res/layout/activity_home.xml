@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Header include (full width) -->
+    <!-- Header include  -->
     <include
         layout="@layout/header" />
 

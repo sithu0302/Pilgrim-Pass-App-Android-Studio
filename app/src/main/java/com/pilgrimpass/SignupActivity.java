@@ -83,7 +83,7 @@ public class SignupActivity extends AppCompatActivity {
                 return;
             }
 
-            // ✅ Save data to SharedPreferences
+            // Save data to SharedPreferences
             SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
             SharedPreferences.Editor editor = prefs.edit();
             editor.putString("username", username);
