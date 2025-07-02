@@ -18,7 +18,7 @@
     <string name="usern">Username</string>
     <string name="profileui">Profile</string>
     <string name="qr_code_passui">QR Code Pass</string>
-    <string name="booking_screenui">Booking Screen</string>
+    <string name="booking_screenui">Bookings</string>
     <string name="scan_pass_organizersui">Scan Pass (Organizers)</string>
     <string name="live_mapui">Live Map</string>
     <string name="admin_panelui">Admin Panel</string>
@@ -49,13 +49,15 @@
     <string name="login_head">LOGIN</string>
     <string name="pilgrim_pass_header">Pilgrim Pass</string>
     <string name="about_pilgrimage_days">About Pilgrimage Days</string>
-    <string name="booking_screen">Booking Screen</string>
+    <string name="booking_screen">Bookings</string>
     <string name="please_select_your_preferred_date_and_time_for_your_visit">Please select your preferred date and time for your visit.</string>
-    <string name="booking_screen_HEAD">BOOKING SCREEN</string>
+    <string name="booking_screen_HEAD">BOOKINGS</string>
     <string name="enter_address">enter_address</string>
     <string name="show_location">show_location</string>
     <string name="show_locationname">Show Location</string>
     <string name="enter_address_name">Enter address</string>
+    <string name="welcome_administrator">Welcome, Administrator!</string>
+    <string name="welcome_admin">Welcome, Administrator!</string>
 
 
 </resources>

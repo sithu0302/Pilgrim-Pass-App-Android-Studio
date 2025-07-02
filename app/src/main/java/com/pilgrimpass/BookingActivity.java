@@ -3,6 +3,7 @@ package com.pilgrimpass;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.content.SharedPreferences; // Required for SharedPreferences.
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -38,9 +39,17 @@ public class BookingActivity extends AppCompatActivity {
                 Toast.makeText(this,
                         "Booking confirmed on " + selectedDate + " at " + selectedTime,
                         Toast.LENGTH_LONG).show();
-                // You can save this data to database here
+
+                // --- Save booking details to SharedPreferences ---
+                SharedPreferences bookingPrefs = getSharedPreferences("BookingDetails", MODE_PRIVATE);
+                SharedPreferences.Editor editor = bookingPrefs.edit();
+                editor.putString("selectedBookingDate", selectedDate);
+                editor.putString("selectedBookingTime", selectedTime);
+                editor.apply();
+                // --- End of saving section ---
+
             } else {
-                Toast.makeText(this, "Please select date and time", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Please select date and time.", Toast.LENGTH_SHORT).show();
             }
         });
     }

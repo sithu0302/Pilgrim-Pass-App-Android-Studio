@@ -33,21 +33,28 @@ android {
 
 dependencies {
 
+    // AndroidX Libraries (ensure these are up-to-date in libs.versions.toml)
     implementation(libs.appcompat)
-    implementation(libs.material)
+    implementation(libs.material) // One instance is enough
     implementation(libs.activity)
     implementation(libs.constraintlayout)
-    implementation(libs.play.services.maps)
+
+    // Google Play Services Maps (ensure this is up-to-date in libs.versions.toml)
+    implementation(libs.play.services.maps) // Use this, assuming it points to the latest version
+
+    // Testing Libraries
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation (libs.appcompat.v161)
-    implementation (libs.material)
-    implementation (libs.zxing.core)
-    implementation (libs.zxing.android.embedded)
-    implementation (libs.play.services.maps.v1810)
 
-
-
-
+    // Zxing Libraries for QR code scanning/generation
+    // Note: zxing-android-embedded usually brings in zxing-core as a transitive dependency.
+    // However, if you explicitly need zxing-core for direct usage, keep it.
+    implementation(libs.zxing.core)
+    implementation(libs.zxing.android.embedded)
+    implementation (libs.material.v1xx)
+    // REMOVED DUPLICATE/OLDER VERSIONS:
+    // implementation (libs.appcompat.v161) - Replaced by libs.appcompat
+    // implementation (libs.material) - Duplicate, already above
+    // implementation (libs.play.services.maps.v1810) - Replaced by libs.play.services.maps
 }

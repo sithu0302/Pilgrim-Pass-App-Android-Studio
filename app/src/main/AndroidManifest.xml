@@ -15,7 +15,7 @@
     <uses-permission android:name="android.permission.INTERNET" /> <!-- apikey -->
     <meta-data
         android:name="com.google.android.geo.API_KEY"
-        android:value="@string/google_maps_key" />
+        android:value="AIzaSyBI4o8myAdyD6cT77chnSecrp8UHfhRLPQ" />
 
     <application
         android:allowBackup="true"
@@ -27,12 +27,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PilgrimPass"
         tools:targetApi="31">
-        <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FragmentMyActivity"
-            android:exported="false" />
+
         <activity
             android:name=".HeaderActivity"
             android:exported="false" />

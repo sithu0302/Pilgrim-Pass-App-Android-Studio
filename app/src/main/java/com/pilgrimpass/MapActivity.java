@@ -1,7 +1,8 @@
 package com.pilgrimpass;
 
 import android.Manifest;
-import android.annotation.SuppressLint;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Button;
@@ -22,19 +23,26 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
 
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
     private MapView mapView;
-    private final GoogleMap gMap;
+    private GoogleMap gMap;
 
-    // Maligawa location - change these coords to your maligawa location
     private final LatLng maligawaLatLng = new LatLng(7.2933, 80.6350);
 
-    public MapActivity(GoogleMap gMap) {
-        this.gMap = gMap;
-    }
-
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Check login status
+        SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        boolean isLoggedIn = prefs.getBoolean("isLoggedIn", false);
+
+        if (!isLoggedIn) {
+            // Redirect to login screen if not logged in
+            Intent intent = new Intent(this, LoginActivity.class);
+            startActivity(intent);
+            finish();
+            return;
+        }
+
         setContentView(R.layout.activity_map);
 
         mapView = findViewById(R.id.mapView);
@@ -49,11 +57,25 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
                 gMap.addMarker(new MarkerOptions()
                         .position(maligawaLatLng)
                         .title("Maligawa"));
-
                 gMap.moveCamera(CameraUpdateFactory.newLatLngZoom(maligawaLatLng, 15));
                 Toast.makeText(this, "Maligawa selected!", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        this.gMap = googleMap;
+
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED
+                || ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+            gMap.setMyLocationEnabled(true);
+            gMap.getUiSettings().setMyLocationButtonEnabled(true);
+        } else {
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
+                    LOCATION_PERMISSION_REQUEST_CODE);
+        }
     }
 
     @Override
@@ -76,8 +98,6 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             }
         }
     }
-
-    // Don't forget lifecycle methods for MapView
 
     @Override
     protected void onResume() {
@@ -113,10 +133,5 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     public void onLowMemory() {
         super.onLowMemory();
         mapView.onLowMemory();
-    }
-
-    @Override
-    public void onMapReady(@NonNull GoogleMap googleMap) {
-
     }
 }

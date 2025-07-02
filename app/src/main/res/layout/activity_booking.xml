@@ -9,10 +9,11 @@
     tools:context=".BookingActivity">
     <include
         layout="@layout/header" />
+
     <LinearLayout
         android:id="@+id/bookingLayout"
-        android:layout_width="264dp"
-        android:layout_height="354dp"
+        android:layout_width="263dp"
+        android:layout_height="322dp"
         android:background="@drawable/img1"
         android:gravity="center_horizontal"
         android:orientation="vertical"
