@@ -3,16 +3,16 @@ package com.pilgrimpass;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.View; // Required for View.GONE / View.VISIBLE.
-import android.widget.Button;
-import android.widget.TextView; // Required for the new TextView.
+import android.view.View;
+import android.widget.Button; // android.widget.Button import එක දැනටමත් තිබේ.
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
     Button btnBooking, btnQrPass, btnScanPass, btnProfile, btnLiveMap, btnAdminPanel;
-    TextView tvAdminWelcome; // Declare the TextView for the admin welcome message.
+    TextView tvAdminWelcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,12 @@ public class HomeActivity extends AppCompatActivity {
         btnProfile = findViewById(R.id.btnProfile);
         btnLiveMap = findViewById(R.id.btnLiveMap);
         btnAdminPanel = findViewById(R.id.btnAdminPanel);
-        tvAdminWelcome = findViewById(R.id.tvAdminWelcome); // Initialize the TextView.
+        tvAdminWelcome = findViewById(R.id.tvAdminWelcome);
+
+        // Settings Button එක find කරන්න
+        // Settings Button එක සඳහා ප්‍රකාශනය
+        // ඔබගේ settings button එකේ id එක 'button' නිසා 'btnSettings' ලෙස නම් කරමු.
+        Button btnSettings = findViewById(R.id.button); // XML හි id="button" ලෙස ඇති නිසා
 
         // Get the userType from SharedPreferences that was saved during login.
         String userType = prefs.getString("loggedInUserType", "Public"); // Default to "Public".
@@ -84,6 +89,13 @@ public class HomeActivity extends AppCompatActivity {
             if (userType.equals("Admin")) {
                 startActivity(new Intent(HomeActivity.this, AdminPanelActivity.class));
             }
+        });
+
+        // Settings Button එකට OnClickListener එකක් සකසන්න
+        btnSettings.setOnClickListener(v -> {
+            // SettingsActivity එකට යාමට Intent එකක් සාදන්න
+            Intent intent = new Intent(HomeActivity.this, SettingActivity.class);
+            startActivity(intent); // Activity එක ආරම්භ කරන්න
         });
     }
 }

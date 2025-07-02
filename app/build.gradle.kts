@@ -57,4 +57,7 @@ dependencies {
     // implementation (libs.appcompat.v161) - Replaced by libs.appcompat
     // implementation (libs.material) - Duplicate, already above
     // implementation (libs.play.services.maps.v1810) - Replaced by libs.play.services.maps
-}
+
+
+    implementation (libs.play.services.location) // For location services (if needed)
+    }

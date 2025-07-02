@@ -1,7 +1,8 @@
 [versions]
 agp = "8.10.1"
-appcompatVersion = "1.6.1"
+appcompatVersion = "1.7.1"
 core = "3.5.2"
+googlePlayServicesMaps = "19.2.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
@@ -9,25 +10,38 @@ appcompat = "1.7.1"
 material = "1.12.0"
 activity = "1.10.1"
 constraintlayout = "2.2.1"
+#noinspection GradleDependency
 materialVersion = "1.x.x"
-playServicesMapsVersion = "18.1.0"
+playServicesLocation = "21.3.0"
+playServicesMapsVersion = "19.2.0"
 zxingAndroidEmbedded = "4.3.0"
 playServicesMaps = "19.2.0"
 
 [libraries]
+#noinspection SimilarGradleDependency
 appcompat-v161 = { module = "androidx.appcompat:appcompat", version.ref = "appcompatVersion" }
+#noinspection SimilarGradleDependency
 core = { module = "com.google.zxing:core", version.ref = "core" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+#noinspection SimilarGradleDependency
 appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+#noinspection SimilarGradleDependency
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+#noinspection SimilarGradleDependency
 material-v1xx = { module = "com.google.android.material:material", version.ref = "materialVersion" }
+play-services-location = { module = "com.google.android.gms:play-services-location", version.ref = "playServicesLocation" }
+#noinspection SimilarGradleDependency
 play-services-maps-v1810 = { module = "com.google.android.gms:play-services-maps", version.ref = "playServicesMapsVersion" }
+#noinspection SimilarGradleDependency
+play-services-maps-v1820 = { module = "com.google.android.gms:play-services-maps", version.ref = "googlePlayServicesMaps" }
+#noinspection SimilarGradleDependency
 zxing-core = { module = "com.google.zxing:core", version.ref = "core" }
 zxing-android-embedded = { module = "com.journeyapps:zxing-android-embedded", version.ref = "zxingAndroidEmbedded" }
+#noinspection SimilarGradleDependency
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
 
 

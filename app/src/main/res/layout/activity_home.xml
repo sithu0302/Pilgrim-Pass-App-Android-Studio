@@ -5,180 +5,204 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"> <include layout="@layout/header" />
+    android:background="@color/white">
+
+    <include layout="@layout/header" />
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:fillViewport="true"
-        android:background="@color/white"> <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp"
-        android:gravity="center_horizontal"
-        android:background="@color/white"> <TextView
-        android:id="@+id/titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:fontFamily="@font/abril_fatface"
-        android:text="@string/daladamaligawa"
-        android:textColor="#009688"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        android:gravity="center" />
+        android:background="@color/white">
 
-        <TextView
-            android:id="@+id/descriptionText"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/smalldescription"
-            android:textSize="16sp"
-            android:textColor="#444444"
-            android:gravity="center"
-            android:layout_marginBottom="32dp"
-            android:lineSpacingExtra="4dp" />
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="center_horizontal"
+            android:background="@color/white">
 
-        <TextView
-            android:id="@+id/tvAdminWelcome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:layout_marginBottom="24dp"
-            android:text="@string/welcome_admin"
-            android:textColor="#D32F2F"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:visibility="gone"
-            android:gravity="center" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"> <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true" android:layout_toStartOf="@+id/button" android:layout_marginEnd="8dp" android:layout_marginBottom="12dp"
+                android:fontFamily="@font/abril_fatface"
+                android:text="@string/daladamaligawa"
+                android:textColor="#009688"
+                android:textSize="36sp"
+                android:textStyle="bold" />
 
-        <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:columnCount="2"
-            android:rowCount="3"
-            android:alignmentMode="alignMargins"
-            android:columnOrderPreserved="false"
-            android:padding="8dp">
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="68dp"
+                    android:layout_height="63dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginEnd="0dp"
+                    android:foreground="@drawable/setting"
+                    android:text="@string/setting_btn"
+                    android:textColor="#827717"
+                    app:cornerRadius="50dp"  app:strokeColor="#FFC107" app:strokeWidth="2dp"
+                    tools:ignore="TextSizeCheck,TextContrastCheck" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnBooking"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_margin="8dp"
-                android:text="@string/booking_screenui"
-                android:textColor="@color/black"
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/descriptionText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/smalldescription"
                 android:textSize="16sp"
-                android:textAllCaps="false"
-                app:cornerRadius="12dp"
-                app:backgroundTint="#E0F2F1" app:strokeColor="#009688"
-                app:strokeWidth="1dp"
-                app:elevation="4dp"
+                android:textColor="#444444"
                 android:gravity="center"
-                tools:ignore="VisualLintButtonSize" />
+                android:layout_marginBottom="32dp"
+                android:lineSpacingExtra="4dp" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnQrPass"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_margin="8dp"
-                android:text="@string/qr_code_passui"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textAllCaps="false"
-                app:cornerRadius="12dp"
-                app:backgroundTint="#E0F2F1"
-                app:strokeColor="#009688"
-                app:strokeWidth="1dp"
-                app:elevation="4dp"
-                android:gravity="center"
-                tools:ignore="VisualLintButtonSize" />
+            <TextView
+                android:id="@+id/tvAdminWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="24dp"
+                android:text="@string/welcome_admin"
+                android:textColor="#D32F2F"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:gravity="center" />
 
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="3"
+                android:alignmentMode="alignMargins"
+                android:columnOrderPreserved="false"
+                android:padding="8dp">
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnLiveMap"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_margin="8dp"
-                android:text="@string/live_mapui"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textAllCaps="false"
-                app:cornerRadius="12dp"
-                app:backgroundTint="#E0F2F1"
-                app:strokeColor="#009688"
-                app:strokeWidth="1dp"
-                app:elevation="4dp"
-                android:gravity="center"
-                tools:ignore="VisualLintButtonSize" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnBooking"
+                    android:layout_width="0dp" android:layout_height="120dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:foregroundTint="#4CAF50"
+                    android:gravity="center"
+                    android:text="@string/booking_screenui"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:backgroundTint="#E0F2F1"
+                    app:cornerRadius="12dp"
+                    app:elevation="4dp"
+                    app:strokeColor="#009688"
+                    app:strokeWidth="1dp"
+                    tools:ignore="VisualLintButtonSize" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnProfile"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_margin="8dp"
-                android:text="@string/profileui"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textAllCaps="false"
-                app:cornerRadius="12dp"
-                app:backgroundTint="#E0F2F1"
-                app:strokeColor="#009688"
-                app:strokeWidth="1dp"
-                app:elevation="4dp"
-                android:gravity="center"
-                tools:ignore="VisualLintButtonSize" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnQrPass"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="8dp"
+                    android:text="@string/qr_code_passui"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12dp"
+                    app:backgroundTint="#E0F2F1"
+                    app:strokeColor="#009688"
+                    app:strokeWidth="1dp"
+                    app:elevation="4dp"
+                    android:gravity="center"
+                    tools:ignore="VisualLintButtonSize" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnScanPass"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_margin="8dp"
-                android:text="@string/scan_pass_organizersui"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textAllCaps="false"
-                app:cornerRadius="12dp"
-                app:backgroundTint="#E0F2F1"
-                app:strokeColor="#009688"
-                app:strokeWidth="1dp"
-                app:elevation="4dp"
-                android:gravity="center"
-                tools:ignore="VisualLintButtonSize" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLiveMap"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="8dp"
+                    android:text="@string/live_mapui"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12dp"
+                    app:backgroundTint="#E0F2F1"
+                    app:strokeColor="#009688"
+                    app:strokeWidth="1dp"
+                    app:elevation="4dp"
+                    android:gravity="center"
+                    tools:ignore="VisualLintButtonSize" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/btnAdminPanel"
-                android:layout_width="0dp"
-                android:layout_height="120dp"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_margin="8dp"
-                android:text="@string/admin_panelui"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textAllCaps="false"
-                app:cornerRadius="12dp"
-                app:backgroundTint="#E0F2F1"
-                app:strokeColor="#009688"
-                app:strokeWidth="1dp"
-                app:elevation="4dp"
-                android:gravity="center"
-                tools:ignore="VisualLintButtonSize" />
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnProfile"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="8dp"
+                    android:text="@string/profileui"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12dp"
+                    app:backgroundTint="#E0F2F1"
+                    app:strokeColor="#009688"
+                    app:strokeWidth="1dp"
+                    app:elevation="4dp"
+                    android:gravity="center"
+                    tools:ignore="VisualLintButtonSize" />
 
-        </GridLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnScanPass"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="8dp"
+                    android:text="@string/scan_pass_organizersui"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12dp"
+                    app:backgroundTint="#E0F2F1"
+                    app:strokeColor="#009688"
+                    app:strokeWidth="1dp"
+                    app:elevation="4dp"
+                    android:gravity="center"
+                    tools:ignore="VisualLintButtonSize" />
 
-    </LinearLayout>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAdminPanel"
+                    android:layout_width="0dp"
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:layout_margin="8dp"
+                    android:text="@string/admin_panelui"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    app:cornerRadius="12dp"
+                    app:backgroundTint="#E0F2F1"
+                    app:strokeColor="#009688"
+                    app:strokeWidth="1dp"
+                    app:elevation="4dp"
+                    android:gravity="center"
+                    tools:ignore="VisualLintButtonSize" />
+
+            </GridLayout>
+
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
