@@ -9,10 +9,11 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission
         android:name="android.permission.READ_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" /> <!-- Location Permissions -->
+        android:maxSdkVersion="32" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Internet permission -->
-    <uses-permission android:name="android.permission.INTERNET" /> <!-- apikey -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <meta-data
         android:name="com.google.android.geo.API_KEY"
         android:value="AIzaSyBI4o8myAdyD6cT77chnSecrp8UHfhRLPQ" />
@@ -28,6 +29,25 @@
         android:theme="@style/Theme.PilgrimPass"
         tools:targetApi="31">
         <activity
+            android:name=".ItemGalleryCategoryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".ItemImageSlideActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".GalleryCategoryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".profileSettingActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY" />
+
+        <activity
             android:name=".SettingActivity"
             android:exported="false" />
         <activity
@@ -41,7 +61,7 @@
             android:exported="false"
             tools:ignore="Instantiatable" />
         <activity
-            android:name=".ProfileActivity"
+            android:name=".DaladaMaligawaInfoActivity"
             android:exported="false" />
         <activity
             android:name=".ScanActivity"

@@ -16,6 +16,7 @@ playServicesLocation = "21.3.0"
 playServicesMapsVersion = "19.2.0"
 zxingAndroidEmbedded = "4.3.0"
 playServicesMaps = "19.2.0"
+googleAndroidLibrariesMapsplatformSecretsGradlePlugin = "2.0.1"
 
 [libraries]
 #noinspection SimilarGradleDependency
@@ -47,4 +48,5 @@ play-services-maps = { group = "com.google.android.gms", name = "play-services-m
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
+google-android-libraries-mapsplatform-secrets-gradle-plugin = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "googleAndroidLibrariesMapsplatformSecretsGradlePlugin" }
 

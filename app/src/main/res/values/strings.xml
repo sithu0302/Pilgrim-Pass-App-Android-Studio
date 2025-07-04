@@ -68,6 +68,33 @@
     <string name="location_kandy">Location: Kandy</string>
     <string name="sunny">Sunny</string>
     <string name="_28_c">28°C</string>
-
+    <string name="sri_dalada_maligawa_temple_of_the_sacred_tooth_relic">Sri Dalada Maligawa (Temple of the Sacred Tooth Relic)</string>
+    <string name="key_information">Key Information</string>
+    <string name="the_temple_of_the_sacred_tooth_relic_sri_dalada_maligawa_is_a_buddhist_temple_in_the_city_of_kandy_sri_lanka_it_s_located_in_the_royal_palace_complex_of_the_former_kingdom_of_kandy_which_houses_the_relic_of_the_tooth_of_the_buddha_since_ancient_times_the_relic_has_played_an_important_role_in_local_politics_because_it_is_believed_that_whoever_holds_the_relic_holds_the_governance_of_the_country_kandy_was_the_last_capital_of_the_sinhala_kings_and_it_s_a_unesco_world_heritage_site">The Temple of the Sacred Tooth Relic (Sri Dalada Maligawa) is a Buddhist temple in the city of Kandy, Sri Lanka. It\'s located in the royal palace complex of the former Kingdom of Kandy, which houses the relic of the tooth of the Buddha. Since ancient times, the relic has played an important role in local politics because it is believed that whoever holds the relic holds the governance of the country. Kandy was the last capital of the Sinhala kings, and it\'s a UNESCO World Heritage Site.</string>
+    <string name="view_on_map">View on Map</string>
+    <string name="_1_of_x_images">1 of X Images</string>
+    <string name="book_a_visit">Book a Visit</string>
+    <string name="permitted_areas_main_temple_audience_hall_new_temple_temple_museum">**Permitted Areas:** Main Temple, Audience Hall, New Temple, Temple Museum</string>
+    <string name="maximum_daily_visitors_5000_approximate">**Maximum Daily Visitors:** 5000 (Approximate)</string>
+    <string name="pooja_exhibition_times_5_30_am_7_00_am_9_30_am_11_00_am_6_30_pm_8_00_pm">**Pooja/Exhibition Times:** 5:30 AM - 7:00 AM, 9:30 AM - 11:00 AM, 6:30 PM - 8:00 PM</string>
+    <string name="image_galleries_by_category">Image Galleries by Category</string>
+    <string name="go_to_category">Go to category</string>
+    <string name="category_icon">Category Icon</string>
+    <string name="category_name">Category Name</string>
+    <string name="todo">TODO</string>
+    <string name="view_gallery_categories">View Gallery Categories</string>
+    <string name="gallery_image">Gallery Image</string>
+    <!--<string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_maps1">MapsActivity1</string>
+    <string name="sri_dalada_maligawa_temple_of_the_sacred_tooth_relic">Sri Dalada Maligawa (Temple of the Sacred Tooth Relic)</string>
+    <string name="the_temple_of_the_sacred_tooth_relic_sri_dalada_maligawa_is_a_buddhist_temple_in_the_city_of_kandy_sri_lanka_it_s_located_in_the_royal_palace_complex_of_the_former_kingdom_of_kandy_which_houses_the_relic_of_the_tooth_of_the_buddha_since_ancient_times_the_relic_has_played_an_important_role_in_local_politics_because_it_is_believed_that_whoever_holds_the_relic_holds_the_governance_of_the_country_kandy_was_the_last_capital_of_the_sinhala_kings_and_it_s_a_unesco_world_heritage_site">The Temple of the Sacred Tooth Relic (Sri Dalada Maligawa) is a Buddhist temple in the city of Kandy, Sri Lanka. It\'s located in the royal palace complex of the former Kingdom of Kandy, which houses the relic of the tooth of the Buddha. Since ancient times, the relic has played an important role in local politics because it is believed that whoever holds the relic holds the governance of the country. Kandy was the last capital of the Sinhala kings, and it\'s a UNESCO World Heritage Site.</string>
+    <string name="key_information">Key Information</string>
+    <string name="view_on_map">View on Map</string>
+    <string name="_1_of_x_images">1 of X Images</string>
+    <string name="maximum_daily_visitors_5000_approximate">**Maximum Daily Visitors:** 5000 (Approximate)</string>
+    <string name="permitted_areas_main_temple_audience_hall_new_temple_temple_museum">**Permitted Areas:** Main Temple, Audience Hall, New Temple, Temple Museum</string>
+    <string name="pooja_exhibition_times_5_30_am_7_00_am_9_30_am_11_00_am_6_30_pm_8_00_pm">**Pooja/Exhibition Times:** 5:30 AM - 7:00 AM, 9:30 AM - 11:00 AM, 6:30 PM - 8:00 PM</string>
+    <string name="book_a_visit">Book a Visit</string>
+-->
 
 </resources>

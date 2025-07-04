@@ -151,7 +151,7 @@
                     android:layout_columnWeight="1"
                     android:layout_rowWeight="1"
                     android:layout_margin="8dp"
-                    android:text="@string/profileui"
+                    android:text="@string/view_gallery_categories"
                     android:textColor="@color/black"
                     android:textSize="16sp"
                     android:textAllCaps="false"

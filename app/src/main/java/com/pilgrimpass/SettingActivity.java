@@ -28,7 +28,7 @@ public class SettingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_setting);
+        setContentView(R.layout.activity_setting); // Corrected layout name to activity_settings
 
         // Initialize SharedPreferences
         settingsPrefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
@@ -76,9 +76,9 @@ public class SettingActivity extends AppCompatActivity {
         });
 
         btnProfileSettings.setOnClickListener(v -> {
-            // TODO: Navigate to Profile Settings Activity
+            // Navigate to Profile Settings Activity
             Toast.makeText(SettingActivity.this, "Opening Profile Settings...", Toast.LENGTH_SHORT).show();
-            // Example: startActivity(new Intent(SettingsActivity.this, ProfileSettingsActivity.class));
+            startActivity(new Intent(SettingActivity.this, profileSettingActivity.class));
         });
 
         btnLogout.setOnClickListener(v -> {

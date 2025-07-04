@@ -4,67 +4,66 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button; // android.widget.Button import එක දැනටමත් තිබේ.
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button btnBooking, btnQrPass, btnScanPass, btnProfile, btnLiveMap, btnAdminPanel;
+    Button btnBooking, btnQrPass, btnScanPass, btnLiveMap, btnAdminPanel;
+    Button btnDaladaMaligawaInfo; // Profile බොත්තම සඳහා වූ විචල්‍යය
+    Button btnGalleryCategories; // <--- NEW BUTTON DECLARATION (ගැලරි බොත්තම සඳහා)
     TextView tvAdminWelcome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Check login status first.
+        // Login තත්ත්වය පරීක්ෂා කරන්න.
         SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
         boolean isLoggedIn = prefs.getBoolean("isLoggedIn", false);
 
         if (!isLoggedIn) {
-            // Redirect to login screen if not logged in.
+            // Login වී නොමැති නම් login screen වෙත යොමු කරන්න.
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
             finish();
             return;
         }
 
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_home); // home screen layout එක සකසන්න
 
+        // UI elements Initialize කරන්න
         btnBooking = findViewById(R.id.btnBooking);
         btnQrPass = findViewById(R.id.btnQrPass);
         btnScanPass = findViewById(R.id.btnScanPass);
-        btnProfile = findViewById(R.id.btnProfile);
+        btnDaladaMaligawaInfo = findViewById(R.id.btnProfile); // activity_home.xml හි Profile බොත්තමේ ID එක භාවිතා කරයි
         btnLiveMap = findViewById(R.id.btnLiveMap);
         btnAdminPanel = findViewById(R.id.btnAdminPanel);
         tvAdminWelcome = findViewById(R.id.tvAdminWelcome);
+       // <--- NEW BUTTON INITIALIZATION (අවශ්‍ය නම්)
 
-        // Settings Button එක find කරන්න
-        // Settings Button එක සඳහා ප්‍රකාශනය
-        // ඔබගේ settings button එකේ id එක 'button' නිසා 'btnSettings' ලෙස නම් කරමු.
-        Button btnSettings = findViewById(R.id.button); // XML හි id="button" ලෙස ඇති නිසා
+        // ඔබේ settings බොත්තම header එකේ තිබේ නම්
+        Button btnSettings = findViewById(R.id.button);
 
-        // Get the userType from SharedPreferences that was saved during login.
-        String userType = prefs.getString("loggedInUserType", "Public"); // Default to "Public".
+        String userType = prefs.getString("loggedInUserType", "Public");
 
-        // --- Role-based access control logic for button visibility ---
+        // --- Role-based access control logic ---
         if (userType.equals("Admin")) {
-            // If the user is Admin, show relevant buttons and the welcome message.
             btnScanPass.setVisibility(View.VISIBLE);
             btnAdminPanel.setVisibility(View.VISIBLE);
-            btnQrPass.setVisibility(View.VISIBLE); // Admins can also generate QR passes.
-            tvAdminWelcome.setVisibility(View.VISIBLE); // Show "Welcome, Administrator!" message.
+            btnQrPass.setVisibility(View.VISIBLE);
+            tvAdminWelcome.setVisibility(View.VISIBLE);
         } else {
-            // If the user is Public, hide admin-specific buttons and the welcome message.
-            btnScanPass.setVisibility(View.GONE); // Hide QR Pass Scan.
-            btnAdminPanel.setVisibility(View.GONE); // Hide Admin Panel.
-            btnQrPass.setVisibility(View.VISIBLE); // Public users should see their QR pass button.
-            tvAdminWelcome.setVisibility(View.GONE); // Hide admin welcome message.
+            btnScanPass.setVisibility(View.GONE);
+            btnAdminPanel.setVisibility(View.GONE);
+            btnQrPass.setVisibility(View.VISIBLE);
+            tvAdminWelcome.setVisibility(View.GONE);
         }
         // --- End of Role-based access control logic ---
 
-        // Set up OnClickListener for each button.
+        // එක් එක් බොත්තම සඳහා OnClickListener සකසන්න.
         btnBooking.setOnClickListener(v ->
                 startActivity(new Intent(HomeActivity.this, BookingActivity.class)));
 
@@ -72,30 +71,35 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(new Intent(HomeActivity.this, QrPassActivity.class)));
 
         btnScanPass.setOnClickListener(v -> {
-            // Only allow Admins to scan passes.
             if (userType.equals("Admin")) {
                 startActivity(new Intent(HomeActivity.this, ScanActivity.class));
             }
         });
 
-        btnProfile.setOnClickListener(v ->
-                startActivity(new Intent(HomeActivity.this, ProfileActivity.class)));
+        // **වැදගත්: මෙය "Profile" බොත්තම DaladaMaligawaInfoActivity වෙත යොමු කරන වෙනසයි**
+        btnDaladaMaligawaInfo.setOnClickListener(v ->
+                startActivity(new Intent(HomeActivity.this, DaladaMaligawaInfoActivity.class)));
 
         btnLiveMap.setOnClickListener(v ->
                 startActivity(new Intent(HomeActivity.this, MapActivity.class)));
 
         btnAdminPanel.setOnClickListener(v -> {
-            // Only allow Admins to access the Admin Panel.
             if (userType.equals("Admin")) {
                 startActivity(new Intent(HomeActivity.this, AdminPanelActivity.class));
             }
         });
 
-        // Settings Button එකට OnClickListener එකක් සකසන්න
         btnSettings.setOnClickListener(v -> {
-            // SettingsActivity එකට යාමට Intent එකක් සාදන්න
             Intent intent = new Intent(HomeActivity.this, SettingActivity.class);
-            startActivity(intent); // Activity එක ආරම්භ කරන්න
+            startActivity(intent);
         });
+
+        // <--- අලුත්: Gallery Categories බොත්තම සඳහා OnClickListener (පියවර 4 හිදී එකතු කරන්නේ නම්)
+        if(btnGalleryCategories != null) { // බොත්තම HomeActivity layout එකේ ඇත්නම් පමණක්
+            btnGalleryCategories.setOnClickListener(v -> {
+                Intent intent = new Intent(HomeActivity.this, GalleryCategoryActivity.class);
+                startActivity(intent);
+            });
+        }
     }
 }
