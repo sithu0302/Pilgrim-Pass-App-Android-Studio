@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <item name="switchWeatherDetails" type="id" />
+    <item name="switchNotifications" type="id" />
+    <item name="btnLanguageSettings" type="id" />
+    <item name="btnProfileSettings" type="id" />
+    <item name="btnLogout" type="id" />
 </resources>

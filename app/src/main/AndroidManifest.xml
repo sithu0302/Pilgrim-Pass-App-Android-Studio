@@ -40,7 +40,7 @@
             android:name=".GalleryCategoryActivity"
             android:exported="false" />
         <activity
-            android:name=".profileSettingActivity"
+            android:name=".ProfileSettingActivity"
             android:exported="false" />
 
         <meta-data
