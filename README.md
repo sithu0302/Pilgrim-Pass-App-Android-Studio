@@ -8,7 +8,7 @@ Pilgrim Pass App is a mobile application designed to simplify the process of reg
 
     📅 Pass Booking System
 
-    🕉️  Information Page
+    🕉️ Information Page
 
     🗓️ Booking History View
 
@@ -26,7 +26,7 @@ Pilgrim Pass App is a mobile application designed to simplify the process of reg
 
     Backend: Firebase 
 
-    Authentication: Firebase Auth / Google Auth
+    Authentication: Weather Auth / Google Auth
 
     Database: Firebase Firestore / Realtime DB
 
