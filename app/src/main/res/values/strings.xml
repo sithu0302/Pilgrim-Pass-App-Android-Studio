@@ -74,9 +74,9 @@
     <string name="view_on_map">View on Map</string>
     <string name="_1_of_x_images">1 of X Images</string>
     <string name="book_a_visit">Book a Visit</string>
-    <string name="permitted_areas_main_temple_audience_hall_new_temple_temple_museum">**Permitted Areas:** Main Temple, Audience Hall, New Temple, Temple Museum</string>
-    <string name="maximum_daily_visitors_5000_approximate">**Maximum Daily Visitors:** 5000 (Approximate)</string>
-    <string name="pooja_exhibition_times_5_30_am_7_00_am_9_30_am_11_00_am_6_30_pm_8_00_pm">**Pooja/Exhibition Times:** 5:30 AM - 7:00 AM, 9:30 AM - 11:00 AM, 6:30 PM - 8:00 PM</string>
+    <string name="permitted_areas_main_temple_audience_hall_new_temple_temple_museum">Permitted Areas: Main Temple, Audience Hall, New Temple, Temple Museum</string>
+    <string name="maximum_daily_visitors_5000_approximate">Maximum Daily Visitors:5000 (Approximate)</string>
+    <string name="pooja_exhibition_times_5_30_am_7_00_am_9_30_am_11_00_am_6_30_pm_8_00_pm">Pooja/Exhibition Times: 5:30 AM - 7:00 AM, 9:30 AM - 11:00 AM, 6:30 PM - 8:00 PM</string>
     <string name="image_galleries_by_category">Image Galleries by Category</string>
     <string name="go_to_category">Go to category</string>
     <string name="category_icon">Category Icon</string>
