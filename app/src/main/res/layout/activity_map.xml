@@ -25,8 +25,8 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
-        android:layout_width="378dp"
-        android:layout_height="536dp"
+        android:layout_width="379dp"
+        android:layout_height="579dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
@@ -34,7 +34,9 @@
         app:layout_constraintDimensionRatio="H,1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56" />
 
     <LinearLayout
         android:id="@+id/weatherDisplayContainer"
