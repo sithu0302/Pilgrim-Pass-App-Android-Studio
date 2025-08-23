@@ -14,9 +14,8 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyBI4o8myAdyD6cT77chnSecrp8UHfhRLPQ" />
+
+
 
     <application
         android:allowBackup="true"
@@ -28,9 +27,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PilgrimPass"
         tools:targetApi="31">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBI4o8myAdyD6cT77chnSecrp8UHfhRLPQ" />
+
         <activity
             android:name=".BookingDbHelper"
             android:exported="false" />
+
         <activity
             android:name=".ItemGalleryCategoryActivity"
             android:exported="false" />
@@ -44,9 +49,7 @@
             android:name=".ProfileSettingActivity"
             android:exported="false" />
 
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+
 
         <activity
             android:name=".SettingActivity"
@@ -61,6 +64,7 @@
             android:name=".MapActivity"
             android:exported="false"
             tools:ignore="Instantiatable" />
+
         <activity
             android:name=".DaladaMaligawaInfoActivity"
             android:exported="false" />
