@@ -3,7 +3,6 @@ package com.pilgrimpass;
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.SharedPreferences; // Required for SharedPreferences.
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -19,6 +18,7 @@ public class BookingActivity extends AppCompatActivity {
     Button btnSelectDate, btnSelectTime, btnConfirmBooking;
 
     String selectedDate = "", selectedTime = "";
+    private BookingDbHelper db; // <-- NEW
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,22 +31,24 @@ public class BookingActivity extends AppCompatActivity {
         btnSelectTime = findViewById(R.id.btnSelectTime);
         btnConfirmBooking = findViewById(R.id.btnConfirmBooking);
 
+        db = new BookingDbHelper(this); // <-- NEW (ensures table exists)
+
         btnSelectDate.setOnClickListener(v -> showDatePicker());
         btnSelectTime.setOnClickListener(v -> showTimePicker());
 
         btnConfirmBooking.setOnClickListener(v -> {
             if (!selectedDate.isEmpty() && !selectedTime.isEmpty()) {
-                Toast.makeText(this,
-                        "Booking confirmed on " + selectedDate + " at " + selectedTime,
-                        Toast.LENGTH_LONG).show();
 
-                // --- Save booking details to SharedPreferences ---
-                SharedPreferences bookingPrefs = getSharedPreferences("BookingDetails", MODE_PRIVATE);
-                SharedPreferences.Editor editor = bookingPrefs.edit();
-                editor.putString("selectedBookingDate", selectedDate);
-                editor.putString("selectedBookingTime", selectedTime);
-                editor.apply();
-                // --- End of saving section ---
+                long rowId = db.insertBooking(selectedDate, selectedTime); // <-- SAVE TO SQLite
+                if (rowId > 0) {
+                    Toast.makeText(this,
+                            "Booking saved (ID " + rowId + ") on " + selectedDate + " at " + selectedTime,
+                            Toast.LENGTH_LONG).show();
+
+                    // Optional: clear UI
+                } else {
+                    Toast.makeText(this, "Failed to save booking.", Toast.LENGTH_SHORT).show();
+                }
 
             } else {
                 Toast.makeText(this, "Please select date and time.", Toast.LENGTH_SHORT).show();

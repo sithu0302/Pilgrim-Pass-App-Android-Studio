@@ -29,13 +29,14 @@
         android:theme="@style/Theme.PilgrimPass"
         tools:targetApi="31">
         <activity
+            android:name=".BookingDbHelper"
+            android:exported="false" />
+        <activity
             android:name=".ItemGalleryCategoryActivity"
             android:exported="false" />
-
         <activity
             android:name=".ItemImageSlideActivity"
             android:exported="false" />
-
         <activity
             android:name=".GalleryCategoryActivity"
             android:exported="false" />
