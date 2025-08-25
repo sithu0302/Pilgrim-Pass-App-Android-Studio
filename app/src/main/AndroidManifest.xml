@@ -32,9 +32,7 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBI4o8myAdyD6cT77chnSecrp8UHfhRLPQ" />
 
-        <activity
-            android:name=".BookingDbHelper"
-            android:exported="false" />
+
 
         <activity
             android:name=".ItemGalleryCategoryActivity"
