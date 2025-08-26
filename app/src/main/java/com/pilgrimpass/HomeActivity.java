@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class HomeActivity extends AppCompatActivity {
 
     Button btnBooking, btnQrPass, btnScanPass, btnLiveMap, btnAdminPanel;
-    Button btnDaladaMaligawaInfo; // Profile බොත්තම සඳහා වූ විචල්‍යය
+    Button btnDaladaMaligawaInfo; // Profile බොත්තම
     Button btnGalleryCategories; // <--- NEW BUTTON DECLARATION (ගැලරි බොත්තම සඳහා)
     TextView tvAdminWelcome;
 
@@ -20,21 +20,21 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Login තත්ත්වය පරීක්ෂා කරන්න.
+        // Login තත්ත්වය පරීක්ෂා කිරීම
         SharedPreferences prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
         boolean isLoggedIn = prefs.getBoolean("isLoggedIn", false);
 
         if (!isLoggedIn) {
-            // Login වී නොමැති නම් login screen වෙත යොමු කරන්න.
+            // Login වී නොමැති නම් login screen වෙත යොමු කිරීම
             Intent intent = new Intent(this, LoginActivity.class);
             startActivity(intent);
             finish();
             return;
         }
 
-        setContentView(R.layout.activity_home); // home screen layout එක සකසන්න
+        setContentView(R.layout.activity_home); // home screen layout
 
-        // UI elements Initialize කරන්න
+        // UI elements Initialize
         btnBooking = findViewById(R.id.btnBooking);
         btnQrPass = findViewById(R.id.btnQrPass);
         btnScanPass = findViewById(R.id.btnScanPass);
@@ -44,7 +44,7 @@ public class HomeActivity extends AppCompatActivity {
         tvAdminWelcome = findViewById(R.id.tvAdminWelcome);
        // <--- NEW BUTTON INITIALIZATION (අවශ්‍ය නම්)
 
-        // ඔබේ settings බොත්තම header එකේ තිබේ නම්
+
         Button btnSettings = findViewById(R.id.button);
 
         String userType = prefs.getString("loggedInUserType", "Public");
@@ -63,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
         }
         // --- End of Role-based access control logic ---
 
-        // එක් එක් බොත්තම සඳහා OnClickListener සකසන්න.
+
         btnBooking.setOnClickListener(v ->
                 startActivity(new Intent(HomeActivity.this, BookingActivity.class)));
 
@@ -76,7 +76,7 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        // **වැදගත්: මෙය "Profile" බොත්තම DaladaMaligawaInfoActivity වෙත යොමු කරන වෙනසයි**
+
         btnDaladaMaligawaInfo.setOnClickListener(v ->
                 startActivity(new Intent(HomeActivity.this, DaladaMaligawaInfoActivity.class)));
 
@@ -94,7 +94,7 @@ public class HomeActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        // <--- අලුත්: Gallery Categories බොත්තම සඳහා OnClickListener (පියවර 4 හිදී එකතු කරන්නේ නම්)
+
         if(btnGalleryCategories != null) { // බොත්තම HomeActivity layout එකේ ඇත්නම් පමණක්
             btnGalleryCategories.setOnClickListener(v -> {
                 Intent intent = new Intent(HomeActivity.this, GalleryCategoryActivity.class);

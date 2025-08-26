@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_login); // your custom login UI with Login & Signup buttons
+        setContentView(R.layout.activity_login); // login UI with Login & Signup buttons
 
 
         Button btnLogin = findViewById(R.id.Login);

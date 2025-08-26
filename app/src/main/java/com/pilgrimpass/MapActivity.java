@@ -40,7 +40,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1000;
     private GoogleMap gMap;
 
-    // Weather UI (from your XML)
+    // Weather UI
     private LinearLayout weatherDisplayContainer;
     private TextView tvWeatherLocation, tvTemperature, tvWeatherCondition;
 
@@ -49,10 +49,10 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
     private static final String APP_SETTINGS_PREFS_NAME = "AppSettings";
     private static final String KEY_SHOW_WEATHER_DETAILS = "showWeatherDetails";
 
-    // Fixed location: Sri Dalada Maligawa
+    //  location: Sri Dalada Maligawa
     private final LatLng maligawaLatLng = new LatLng(7.2933, 80.6350);
 
-    // OpenWeatherMap API Key (already provided by you)
+    // OpenWeatherMap API Key
     private static final String OPEN_WEATHER_MAP_API_KEY = "a04cace73a8fd8a6aec920d842d9008c";
 
     @Override
@@ -68,7 +68,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
             return;
         }
 
-        setContentView(R.layout.activity_map); // your XML
+        setContentView(R.layout.activity_map); //  XML
 
         // Bind weather panel views defined in XML
         weatherDisplayContainer = findViewById(R.id.weatherDisplayContainer);
@@ -79,7 +79,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         // Settings
         settingsPrefs = getSharedPreferences(APP_SETTINGS_PREFS_NAME, MODE_PRIVATE);
 
-        // Map fragment (id = map in your XML)
+        // Map fragment (id = map in  XML)
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         if (mapFragment != null) {
