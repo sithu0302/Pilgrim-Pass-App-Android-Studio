@@ -1,4 +1,5 @@
 Pilgrim Pass – Android Mobile Application
+=========================================
 
 Pilgrim Pass is a mobile application designed to help manage large crowds during major religious events such as the public worship of the Sacred Tooth Relic in Sri Lanka. The app allows pilgrims to book time slots, receive a digital QR entry pass, and access navigation features, while administrators can scan QR codes and monitor visitor numbers.
 
@@ -73,6 +74,7 @@ Build Tools
     GitHub for version control
 
 📂 Project Structure
+
 Pilgrim-Pass-App-Android-Studio/
 │
 ├── app/
